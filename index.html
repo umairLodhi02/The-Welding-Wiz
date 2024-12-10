@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welding wiz</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d1443b",
+              light_pink: "#efbebb",
+              light_gray: "#BDBDBD",
+              dark_gray: "#595959",
+              dark: "#000",
+              footer_black: "#101010",
+              light_white: "#F5F6F4",
+            },
+            backgroundImage: {
+              banner_bg: "url('./assets/images/common/header-bg.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="home_page">
+      <div id="header">
+        <header class="flex flex-col relative w-full" id="main-header">
+          <div
+            class="w-full flex flex-col justify-between gap-[120px] bg-[rgba(0,0,0,0.6)]"
+          >
+            <div class="flex container mt-4 mx-auto items-center flex-wrap">
+              <div class="logo w-[174px] h-[137px]">
+                <img src="./assets/images/common/logo.png" alt="" srcset="" />
+              </div>
+              <nav class="flex-1 text-end mr-8" id="app-nav-bar">
+                <ul class="flex justify-end gap-10" id="app-nav-bar-list">
+                  <li>
+                    <a
+                      href="../index.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../weldingProcedures.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >Welding procedures</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../ndt.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >NDT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../airQuality.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >Air quality monitoring</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div class="contactus_btn">
+                <a
+                  href="../contactus.html"
+                  class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
+                >
+                  Contact us
+                </a>
+              </div>
+            </div>
+
+            <div class="relative w-full rounded-lg flex-1">
+              <div class="flex flex-col items-center justify-end">
+                <h1
+                  class="text-white text-[24px] md:text-[40px] xl:text-[60px] font-[600] text-center leading-[34px] md:leading-[64px] xl:leading-[74px]"
+                >
+                  Expert Welding & Precision <br />
+                  Testing Solutions
+                </h1>
+                <p
+                  class="text-white text-[14px] md:text-[16px] xl:text-[20px] font-[300] text-center mt-6 mb-10"
+                >
+                  Delivering reliable, certified inspection and testing services
+                  to meet the highest <br />
+                  standards in engineering and manufacturing.
+                </p>
+                <button class="btn btn-primary w-[236px]">
+                  Explore NDT Services<i
+                    class="fa-solid fa-arrow-right-long"
+                  ></i>
+                </button>
+              </div>
+            </div>
+            <div class="contact_section bg-dark text-white mt-16">
+              <div
+                class="flex justify-between py-8 container m-auto gap-4 flex-wrap"
+              >
+                <div class="office_hours">
+                  <h6 class="font-[700] text-[16px] uppercase mb-4">
+                    <i class="fa-regular fa-clock mr-3"></i>Office hours
+                  </h6>
+                  <p class="mb-3 text-light_gray font-[500] text-[16px]">
+                    Mon - Fri: 10:00 AM - 10:00 PM
+                  </p>
+                  <p class="text-light_gray font-[500] text-[16px]">
+                    Sat - Sun: 12:00 AM - 08:00 PM
+                  </p>
+                </div>
+                <div class="phone_numbers">
+                  <h6 class="font-[700] text-[16px] uppercase mb-4">
+                    <i class="fa-solid fa-phone mr-3"></i>Call us anytime
+                  </h6>
+                  <p class="mb-3 text-light_gray font-[500] text-[16px]">
+                    + 123 5647 8758
+                  </p>
+                  <p class="text-light_gray font-[500] text-[16px]">
+                    + 123 5647 8758
+                  </p>
+                </div>
+                <div class="email">
+                  <h6 class="font-[700] text-[16px] uppercase mb-4">
+                    <i class="fa-regular fa-envelope mr-3"></i>Email us
+                  </h6>
+                  <p class="mb-3 text-light_gray font-[500] text-[16px]">
+                    info@weldingwizard.com
+                  </p>
+                  <p class="text-light_gray font-[500] text-[16px]">
+                    info@weldingwizard.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div id="about-us-section" class="my-[96px]">
+        <div class="container mx-auto">
+          <div
+            class="flex gap-[80px] xl:gap-[102px] flex-col-reverse xl:flex-row"
+          >
+            <div
+              class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[546px] rounded-[16px]"
+            >
+              <img
+                src="./assets/images/about-us/about-us-section.jpg"
+                alt="about-us"
+                class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
+              />
+            </div>
+            <div class="flex flex-col gap-[24px]">
+              <h2
+                class="text-[26px] lg:text-[36px] text-footer_black font-[600]"
+              >
+                About Us
+              </h2>
+              <p
+                class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+              >
+                The welding wiz was established to provide a tailored service
+                for all your engineering welding needs. We have a solution and
+                an answer to anything you challenge us with. With 16 years
+                experience in specialist welding service and consulting. Without
+                a doubt the welding wiz is the right people for the job.
+              </p>
+              <p
+                class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+              >
+                We offer a range of services mainly in Melbourne metro and
+                Victoria. We have travelled far and wide on many various
+                projects providing outstanding results. Some common sectors We
+                have worked in are - Oil and gas, pipelines, pressure vessels,
+                ship building, steel structures, trains and trams to name a few.
+                Feel free to view our serives page or get in contact with us if
+                you don’t find what you looking for and we will have answer and
+                solution for whatever you need.
+              </p>
+              <button class="btn btn-primary w-[158px]">
+                Contact us <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="our-services-section" class="mb-[96px]">
+        <div class="container mx-auto">
+          <div class="heading text-center">
+            <h2 class="text-[26px] lg:text-[36px] text-footer_black font-[600]">
+              Our Services
+            </h2>
+            <p
+              class="text-[16px] lg:text-[18px] text-footer_black font-[400] mt-5 mb-[64px]"
+            >
+              Expert welding services crafted for precision, durability, and
+              quality across all <br />
+              applications. Trust us for reliable, high-standard solutions every
+              time.
+            </p>
+          </div>
+          <div
+            id="services"
+            class="flex gap-[32px] flex-wrap justify-between"
+          ></div>
+          <button id="load-more-btn" class="btn btn-primary mt-6 mx-auto w-fit">
+            Load More <i class="fa-solid"></i>
+          </button>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/main.js"></script>
+  </body>
+</html>

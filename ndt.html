@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welding wiz</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d1443b",
+              light_pink: "#efbebb",
+              light_gray: "#BDBDBD",
+              dark_gray: "#595959",
+              dark: "#000",
+              footer_black: "#101010",
+              light_white: "#F5F6F4",
+            },
+            backgroundImage: {
+              banner_bg: "url('./assets/images/common/header-bg.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <header class="flex flex-col relative w-full" id="ndt-header">
+        <div
+          class="w-full flex flex-col justify-between gap-[90px] bg-[rgba(0,0,0,0.6)] pb-[74px]"
+        >
+          <div class="flex container mt-4 mx-auto items-center flex-wrap">
+            <div class="logo w-[174px] h-[137px]">
+              <img src="./assets/images/common/logo.png" alt="" srcset="" />
+            </div>
+            <nav class="flex-1 text-end mr-8" id="app-nav-bar">
+              <ul class="flex justify-end gap-10" id="app-nav-bar-list">
+                <li>
+                  <a
+                    href="../index.html"
+                    class="text-white font-medium border-bottom-hover-effect"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../weldingProcedures.html"
+                    class="text-white font-medium border-bottom-hover-effect"
+                    >Welding procedures</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../ndt.html"
+                    class="text-white font-medium border-bottom-hover-effect"
+                    >NDT</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../airQuality.html"
+                    class="text-white font-medium border-bottom-hover-effect"
+                    >Air quality monitoring</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="contactus_btn">
+              <a
+                href="../contactus.html"
+                class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
+              >
+                Contact us
+              </a>
+            </div>
+          </div>
+
+          <div class="relative w-full rounded-lg flex-1">
+            <div class="flex flex-col items-center justify-end">
+              <h1
+                class="text-white text-[24px] md:text-[40px] xl:text-[60px] font-[600] text-center leading-[34px] md:leading-[64px] xl:leading-[74px]"
+              >
+                Non-destructive testing
+              </h1>
+              <p
+                class="text-white text-[14px] md:text-[16px] xl:text-[20px] font-[300] text-center mt-6"
+              >
+                NDT is a technique employed by industries to assess the
+                properties of materials, <br />
+                components, structures, or systems for characteristic
+                variations, welding defects, and <br />discontinuities, all
+                without damaging the original part.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div id="ndtpage">
+      <div class="container mx-auto py-[96px]">
+        <div class="header text-center">
+          <h2 class="text-[26px] lg:text-[36px] text-footer_black font-[600]">
+            Our NDT Services
+          </h2>
+          <p
+            class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+          >
+            Expert welding services crafted for precision, durability, and
+            quality across all <br />applications. Trust us for reliable,
+            high-standard solutions every time.
+          </p>
+        </div>
+        <div
+          class="mt-[96px] flex gap-[80px] xl:gap-[102px] flex-col-reverse xl:flex-row"
+        >
+          <div
+            class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
+          >
+            <img
+              src="./assets/images/ndt/nd-1.jpg"
+              alt="about-us"
+              class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
+            />
+          </div>
+
+          <div class="flex flex-col gap-[24px]">
+            <h2 class="text-[26px] lg:text-[32px] text-footer_black font-[600]">
+              Magnetic particle inspection
+            </h2>
+            <p
+              class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+            >
+              Magnetic Particle Inspection is a reliable technique used to
+              detect surface and near-surface defects in ferromagnetic
+              materials. By applying magnetic fields and iron particles, cracks,
+              seams, or other discontinuities become visible. This method is
+              particularly effective for identifying flaws that could compromise
+              the integrity of welds and structures. It is quick,
+              cost-effective, and widely used in the welding and construction
+              industries.
+            </p>
+            <button class="btn btn-primary w-[158px]">
+              Contact us <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="mt-[96px] flex gap-[80px] xl:gap-[102px] flex-col-reverse xl:flex-row-reverse"
+        >
+          <div
+            class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
+          >
+            <img
+              src="./assets/images/ndt/nd-2.jpg"
+              alt="about-us"
+              class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
+            />
+          </div>
+
+          <div class="flex flex-col gap-[24px]">
+            <h2 class="text-[26px] lg:text-[32px] text-footer_black font-[600]">
+              Ultrasonic particle inspection
+            </h2>
+            <p
+              class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+            >
+              Ultrasonic Testing utilizes high-frequency sound waves to detect
+              internal flaws like cracks, voids, and inclusions within
+              materials. This non-destructive method provides highly accurate
+              results, making it ideal for evaluating weld quality and ensuring
+              structural integrity. Its ability to penetrate deep into materials
+              makes it a preferred choice for critical inspections in industries
+              like aerospace and manufacturing.
+            </p>
+            <button class="btn btn-primary w-[158px]">
+              Contact us <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="mt-[96px] flex gap-[80px] xl:gap-[102px] flex-col-reverse xl:flex-row"
+        >
+          <div
+            class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
+          >
+            <img
+              src="./assets/images/ndt/nd-3.jpg"
+              alt="about-us"
+              class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
+            />
+          </div>
+
+          <div class="flex flex-col gap-[24px]">
+            <h2 class="text-[26px] lg:text-[32px] text-footer_black font-[600]">
+              Dyepenetrant
+            </h2>
+            <p
+              class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+            >
+              Dye Penetrant Testing is a simple yet effective method for
+              detecting surface defects in materials. A liquid dye is applied to
+              the surface, which seeps into any cracks or openings, making them
+              visible under inspection. Suitable for both ferrous and
+              non-ferrous materials, this method is widely used to identify
+              imperfections that could lead to structural failure. It is easy to
+              implement and provides reliable results for surface flaw
+              detection.
+            </p>
+            <button class="btn btn-primary w-[158px]">
+              Contact us <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="mt-[96px] flex gap-[80px] xl:gap-[102px] flex-col-reverse xl:flex-row-reverse"
+        >
+          <div
+            class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
+          >
+            <img
+              src="./assets/images/ndt/nd-4.jpg"
+              alt="about-us"
+              class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
+            />
+          </div>
+
+          <div class="flex flex-col gap-[24px]">
+            <h2 class="text-[26px] lg:text-[32px] text-footer_black font-[600]">
+              Radiography
+            </h2>
+            <p
+              class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+            >
+              Radiographic Testing uses X-rays or gamma rays to examine the
+              internal structure of welds and materials. By creating detailed
+              radiographic images, this method can reveal hidden defects such as
+              porosity, inclusions, or cracks. It is a highly reliable
+              technique, widely employed in industries requiring stringent
+              quality control, such as oil and gas or shipbuilding.
+            </p>
+            <button class="btn btn-primary w-[158px]">
+              Contact us <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="mt-[96px] flex gap-[80px] xl:gap-[102px] flex-col-reverse xl:flex-row"
+        >
+          <div
+            class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
+          >
+            <img
+              src="./assets/images/ndt/nd-5.jpg"
+              alt="about-us"
+              class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
+            />
+          </div>
+
+          <div class="flex flex-col gap-[24px]">
+            <h2 class="text-[26px] lg:text-[32px] text-footer_black font-[600]">
+              Eddycurrent
+            </h2>
+            <p
+              class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+            >
+              Eddy Current Testing employs electromagnetic fields to identify
+              surface and subsurface defects in conductive materials. This
+              non-contact method is fast, efficient, and versatile, making it
+              suitable for inspecting various components, including welds and
+              thin materials. It is widely used for detecting corrosion, cracks,
+              or other discontinuities in industries like aviation and
+              automotive.
+            </p>
+            <button class="btn btn-primary w-[158px]">
+              Contact us <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="mt-[96px] flex gap-[80px] xl:gap-[102px] flex-col-reverse xl:flex-row-reverse"
+        >
+          <div
+            class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
+          >
+            <img
+              src="./assets/images/ndt/nd-5.jpg"
+              alt="about-us"
+              class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
+            />
+          </div>
+
+          <div class="flex flex-col gap-[24px]">
+            <h2 class="text-[26px] lg:text-[32px] text-footer_black font-[600]">
+              Phase array
+            </h2>
+            <p
+              class="text-[16px] lg:text-[18px] text-footer_black font-[400] leading-[30px]"
+            >
+              Phased Array Ultrasonics is an advanced form of ultrasonic testing
+              that uses multiple sensors to produce detailed cross-sectional
+              images of materials. This method provides exceptional accuracy in
+              detecting and sizing defects, even in complex geometries. Its
+              versatility and precision make it ideal for inspecting critical
+              welds and ensuring high safety standards in industries like power
+              generation and pipelines.
+            </p>
+            <button class="btn btn-primary w-[158px]">
+              Contact us <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/main.js"></script>
+  </body>
+</html>

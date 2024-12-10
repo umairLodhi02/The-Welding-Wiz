@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welding wiz</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d1443b",
+              light_pink: "#efbebb",
+              light_gray: "#BDBDBD",
+              dark_gray: "#595959",
+              dark: "#000",
+              text_normal: "rgba(10,10,10)",
+            },
+            backgroundImage: {
+              banner_bg: "url('./assets/images/common/header-bg.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="contactus-page" class="xl:w-4/5 m-auto">
+      <div class="lg:h-screen">
+        <div
+          class="grid lg:grid-cols-3 items-center max-lg:justify-center gap-6 h-full sm:p-12 p-8 max-sm:p-4"
+        >
+          <div class="max-w-lg max-lg:mx-auto max-lg:text-center max-lg:mb-6">
+            <h2 class="text-4xl font-extrabold text-text_normal">
+              Get In Touch
+            </h2>
+            <p class="text-sm text-text_normal mt-4 leading-relaxed">
+              Have a specific inquiry or looking to explore new opportunities?
+              Our experienced team is ready to engage with you.
+            </p>
+
+            <form
+              class="mx-auto mt-8 bg-white rounded-lg p-6 shadow-md space-y-4"
+            >
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
+              />
+              <textarea
+                placeholder="Message"
+                rows="6"
+                class="w-full rounded-md px-6 bg-[#f0f1f2] text-sm pt-3 outline-none"
+              ></textarea>
+              <button
+                type="button"
+                class="text-white bg-primary hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="z-10 relative lg:col-span-2 lg:block md:hidden sm:hidden">
+            <img
+              src="./assets/images/contactus.webp"
+              class="w-3/4 object-contain block ml-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="./script/main.js"></script>
+  </body>
+</html>
