@@ -79,79 +79,6 @@ const cards = [
   { id: 18, name: "Metallurgical services", isVisible: false },
   { id: 19, name: "Failure investigation", isVisible: false },
 ];
-const loadServices = () => {
-  let services = $("#our-services-section #services");
-
-  function isInView(element) {
-    var windowTop = $(window).scrollTop();
-    var windowBottom = windowTop + $(window).height();
-    var elementTop = $(element).offset().top;
-    var elementBottom = elementTop + $(element).height();
-
-    return elementBottom >= windowTop && elementTop <= windowBottom;
-  }
-
-  // Lazy loading images when they come into view
-  function lazyLoadImages() {
-    $(".lazyload").each(function () {
-      var $this = $(this);
-      if (isInView($this) && !$this.hasClass("loaded")) {
-        var imgSrc = $this.data("src"); // Get the image src from data-src
-        $this.attr("src", imgSrc); // Set the actual image src
-        $this.addClass("loaded"); // Mark the image as loaded
-      }
-    });
-  }
-
-  // Initially load visible images on page load
-  lazyLoadImages();
-
-  // Trigger lazy loading on scroll
-  $(window).on("scroll", function () {
-    lazyLoadImages();
-  });
-
-  // Optional: Trigger lazy loading on resize
-  $(window).on("resize", function () {
-    lazyLoadImages();
-  });
-
-  // Load services with lazy loading
-  const loadServices = () => {
-    let services = $("#our-services-section #services");
-
-    cards.forEach((card) => {
-      let isFull = card.fullwidth ? "lg:basis-full" : "";
-      let serviceHeight = isFull ? "h-[328px] lg:h-[396px]" : "h-[328px]";
-      let serviceImgHeight = isFull ? "h-[240px] lg:h-[340px]" : "h-[240px]";
-      let objFit = isFull ? "object-cover" : "";
-      let margin = isFull ? "lg:my-6" : "";
-      let service = `<div class="service w-full md:w-[calc(50%-32px)] lg:w-[300px] xl:w-[390px] 2xl:w-[480px] ${isFull} ${serviceHeight} ${margin}" id="service-${card.id}">
-              <img
-                data-src="./assets/images/about-us/service-${card.id}.jpg"
-                alt=""
-                class="rounded-[8px] ${serviceImgHeight} w-full ${objFit} lazyload"
-                alt="Service Image ${card.id}"
-                loading='lazy'
-              />
-              <h3
-                class="text-[18px] lg:text-[20px] text-footer_black mt-6 font-[600]"
-              >
-                ${card.name}
-              </h3>
-            </div>`;
-
-      services.append(service);
-    });
-
-    // Trigger lazy load after services are added
-    lazyLoadImages();
-  };
-
-  // Example: Call the function to load services
-  loadServices();
-};
-// loadServices();
 
 $(document).ready(function () {
   // Initializing variables
@@ -177,7 +104,7 @@ $(document).ready(function () {
       let service = `
       <div class="service w-full md:w-[calc(50%-32px)] lg:w-[300px] xl:w-[390px] 2xl:w-[480px] ${isFull} ${serviceHeight} ${margin}" id="service-${card.id}">
         <img
-          src="./assets/images/about-us/service-${card.id}.jpg"
+          src="./assets/images/about-us/service-${card.id}.webp"
           alt="Service Image ${card.id}"
           class="rounded-[8px] ${serviceImgHeight} w-full ${objFit} lazyload"
           loading="lazy"
