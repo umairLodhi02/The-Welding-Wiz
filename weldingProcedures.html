@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="max-age=31536000, must-revalidate"
+    />
+
+    <title>Welding procedures</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d1443b",
+              light_pink: "#efbebb",
+              light_gray: "#BDBDBD",
+              dark_gray: "#595959",
+              dark: "#000",
+              footer_black: "#101010",
+              light_white: "#F5F6F4",
+            },
+            backgroundImage: {
+              banner_bg: "url('./assets/images/common/header-bg.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="air_quality">
+      <div id="header">
+        <header class="flex flex-col relative w-full" id="ndt-header">
+          <div
+            class="w-full flex flex-col justify-between gap-[120px] bg-[rgba(0,0,0,0.6)]"
+          >
+            <div
+              class="flex container mt-4 mx-auto items-center flex-wrap lg:justify-start justify-between"
+            >
+              <div class="logo w-[174px] h-[137px]">
+                <img src="./assets/images/common/logo.png" alt="" srcset="" />
+              </div>
+              <div class="flex-1 relative lg:hidden flex justify-end flex-grow">
+                <button
+                  class="cursor-pointer text-[30px] text-white"
+                  id="open-mobile-nav"
+                >
+                  <i class="fa fa-bars"></i>
+                </button>
+              </div>
+              <div
+                class="lg:hidden block fixed top-0 z-[1045]"
+                id="mobile-nav-container"
+                style="left: -9999px; opacity: 0; height: 0; width: 0"
+              >
+                <div class="bg-dark w-full h-full">
+                  <nav id="mobile-nav">
+                    <ul
+                      class="flex gap-10 flex-col mx-8 py-8"
+                      id="app-nav-bar-list"
+                    >
+                      <li>
+                        <button
+                          class="cursor-pointer text-[30px] text-white float-right"
+                          id="close-mobile-nav"
+                        >
+                          <i class="fa fa-times"></i>
+                        </button>
+                      </li>
+                      <li>
+                        <a
+                          href="index.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >About Us</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="weldingProcedures.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >Welding procedures</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="ndt.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >NDT</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="airQuality.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >Air quality monitoring</a
+                        >
+                      </li>
+                      <div class="contactus_btn">
+                        <a
+                          href="contactus.html"
+                          class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
+                        >
+                          Contact us
+                        </a>
+                      </div>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <nav
+                class="flex-1 text-end mr-8 hidden lg:block"
+                id="app-nav-bar"
+              >
+                <ul
+                  class="flex justify-end gap-10 lg:flex-row flex-col"
+                  id="app-nav-bar-list"
+                >
+                  <li>
+                    <a
+                      href="index.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="weldingProcedures.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >Welding procedures</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ndt.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >NDT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="airQuality.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >Air quality monitoring</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div class="contactus_btn lg:block hidden">
+                <a
+                  href="contactus.html"
+                  class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
+                >
+                  Contact us
+                </a>
+              </div>
+            </div>
+
+            <div class="relative w-full rounded-lg flex-1">
+              <div class="flex flex-col items-center justify-end">
+                <h1
+                  class="text-white text-[24px] md:text-[40px] xl:text-[60px] font-[600] text-center leading-[34px] md:leading-[64px] xl:leading-[74px]"
+                >
+                  Welding Procedures
+                </h1>
+                <p
+                  class="text-white text-[14px] md:text-[16px] xl:text-[20px] font-[300] text-center mt-6 mb-10"
+                >
+                  Precision and Compliance
+                </p>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- Introduction Section -->
+      <section class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img
+              src="./assets/images/welding-inspection/hero-bg.webp"
+              alt="Welding Procedures"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold">
+              Welding Procedures and Qualifications
+            </h2>
+            <p class="mt-6 text-text_normal leading-relaxed">
+              A welding procedure is a development based on a Procedure
+              Qualification Record, which documents collected data acquired from
+              a test weld that would mirror the exact joint and construction
+              specified by required engineered drawings. This data ranges from
+              material and angle to volt amps and travel speed, among other
+              information gathered during the collection phase. The data will be
+              sent to a laboratory for testing and analysis, and after positive
+              results, The Welding Wiz will develop a weld procedure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Points Section -->
+      <section class="bg-light_white py-16">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center">
+            Why Welding Procedures Matter
+          </h2>
+          <div
+            class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <!-- Card 1: Legal Requirement -->
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div
+                class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+              >
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark_gray mt-6">
+                Legal Requirement
+              </h3>
+              <p class="mt-4 text-text_normal">
+                In Australia, it is required by law to have a weld procedure for
+                every weld and joint construction for every weld that is
+                required during a project.
+              </p>
+            </div>
+            <!-- Card 2: Safety Standards -->
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div
+                class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+              >
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark_gray mt-6">
+                Safety Standards
+              </h3>
+              <p class="mt-4 text-text_normal">
+                Welding Procedures and Qualifications are required by law or
+                industry standards to ensure that all welds meet safety
+                standards to reduce risk or any accidents that may occur.
+              </p>
+            </div>
+            <!-- Card 3: Certified Technicians -->
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div
+                class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+              >
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark_gray mt-6">
+                Certified Technicians
+              </h3>
+              <p class="mt-4 text-text_normal">
+                Our technicians are certified and have taken qualification tests
+                to administer welding procedures for inspection and testing,
+                ensuring compliance with standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center">
+          Our Welding Procedure Process
+        </h2>
+        <div class="mt-12 relative">
+          <!-- Step 1 -->
+          <div
+            class="flex flex-col md:flex-row items-center md:space-x-8 mb-12"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold z-10"
+            >
+              1
+            </div>
+            <div class="md:w-1/2 mt-4 md:mt-0">
+              <h3 class="text-xl font-bold text-dark_gray">Data Collection</h3>
+              <p class="mt-2 text-text_normal">
+                Collect data from a test weld, including material, angle, volt
+                amps, and travel speed.
+              </p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div
+            class="flex flex-col md:flex-row items-center md:space-x-8 mb-12"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold z-10"
+            >
+              2
+            </div>
+            <div class="md:w-1/2 mt-4 md:mt-0">
+              <h3 class="text-xl font-bold text-dark_gray">
+                Laboratory Testing
+              </h3>
+              <p class="mt-2 text-text_normal">
+                Send the data to a laboratory for testing and analysis.
+              </p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div
+            class="flex flex-col md:flex-row items-center md:space-x-8 mb-12"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold z-10"
+            >
+              3
+            </div>
+            <div class="md:w-1/2 mt-4 md:mt-0">
+              <h3 class="text-xl font-bold text-dark_gray">
+                Procedure Development
+              </h3>
+              <p class="mt-2 text-text_normal">
+                Develop a weld procedure based on the test results.
+              </p>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div
+            class="flex flex-col md:flex-row items-center md:space-x-8 mb-12"
+          >
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold z-10"
+            >
+              4
+            </div>
+            <div class="md:w-1/2 mt-4 md:mt-0">
+              <h3 class="text-xl font-bold text-dark_gray">Replication</h3>
+              <p class="mt-2 text-text_normal">
+                Welders can replicate the specific weld in the future for
+                similar purposes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="bg-light_white py-16">
+        <section class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center">
+            Why Choose The Welding Wiz?
+          </h2>
+          <div
+            class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            <!-- Expertise -->
+            <div class="text-center">
+              <div
+                class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+              >
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark_gray mt-6">Expertise</h3>
+              <p class="mt-4 text-text_normal">
+                Our team of certified technicians has extensive experience in
+                welding procedures and qualifications.
+              </p>
+            </div>
+            <!-- Compliance -->
+            <div class="text-center">
+              <div
+                class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+              >
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark_gray mt-6">Compliance</h3>
+              <p class="mt-4 text-text_normal">
+                We ensure all welding procedures meet Australian legal and
+                industry standards.
+              </p>
+            </div>
+            <!-- Quality Assurance -->
+            <div class="text-center">
+              <div
+                class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+              >
+                <i class="fas fa-award"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark_gray mt-6">
+                Quality Assurance
+              </h3>
+              <p class="mt-4 text-text_normal">
+                Our procedures are rigorously tested to ensure the highest
+                quality and safety standards.
+              </p>
+            </div>
+            <!-- Nationwide Service -->
+            <div class="text-center">
+              <div
+                class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+              >
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <h3 class="text-xl font-bold text-dark_gray mt-6">
+                Nationwide Service
+              </h3>
+              <p class="mt-4 text-text_normal">
+                We provide welding procedure services across all states in
+                Australia.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="bg-light_pink py-16 hidden">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center">What Our Clients Say</h2>
+          <div
+            class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <p class="text-text_normal italic">
+                "The Welding Wiz provided us with precise and compliant welding
+                procedures that met all legal requirements. Highly recommended!"
+              </p>
+              <div class="mt-6 flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold"
+                >
+                  A
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-dark_gray">Alex Johnson</h4>
+                  <p class="text-sm text-light_gray">Project Manager</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <p class="text-text_normal italic">
+                "Their team is highly professional and knowledgeable. The
+                welding procedures they developed were flawless."
+              </p>
+              <div class="mt-6 flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold"
+                >
+                  S
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-dark_gray">Sarah Lee</h4>
+                  <p class="text-sm text-light_gray">Construction Engineer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <p class="text-text_normal italic">
+                "The Welding Wiz made the entire process seamless. Their
+                attention to detail is unmatched."
+              </p>
+              <div class="mt-6 flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold"
+                >
+                  M
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-dark_gray">
+                    Michael Brown
+                  </h4>
+                  <p class="text-sm text-light_gray">
+                    Quality Assurance Specialist
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="footer"></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/main.js"></script>
+  </body>
+</html>

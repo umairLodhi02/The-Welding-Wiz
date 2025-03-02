@@ -47,45 +47,117 @@
         <div
           class="w-full flex flex-col justify-between gap-[90px] bg-[rgba(0,0,0,0.6)] pb-[74px]"
         >
-          <div class="flex container mt-4 mx-auto items-center flex-wrap">
+          <div
+            class="flex container mt-4 mx-auto items-center flex-wrap lg:justify-start justify-between"
+          >
             <div class="logo w-[174px] h-[137px]">
               <img src="./assets/images/common/logo.png" alt="" srcset="" />
             </div>
-            <nav class="flex-1 text-end mr-8" id="app-nav-bar">
-              <ul class="flex justify-end gap-10" id="app-nav-bar-list">
+            <div class="flex-1 relative lg:hidden flex justify-end flex-grow">
+              <button
+                class="cursor-pointer text-[30px] text-white"
+                id="open-mobile-nav"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <div
+              class="lg:hidden block fixed top-0 z-[1045]"
+              id="mobile-nav-container"
+              style="left: -9999px; opacity: 0; height: 0; width: 0"
+            >
+              <div class="bg-dark w-full h-full">
+                <nav id="mobile-nav">
+                  <ul
+                    class="flex gap-10 flex-col mx-8 py-8"
+                    id="app-nav-bar-list"
+                  >
+                    <li>
+                      <button
+                        class="cursor-pointer text-[30px] text-white float-right"
+                        id="close-mobile-nav"
+                      >
+                        <i class="fa fa-times"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <a
+                        href="index.html"
+                        class="text-white font-medium border-bottom-hover-effect"
+                        >About Us</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="weldingProcedures.html"
+                        class="text-white font-medium border-bottom-hover-effect"
+                        >Welding procedures</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="ndt.html"
+                        class="text-white font-medium border-bottom-hover-effect"
+                        >NDT</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="airQuality.html"
+                        class="text-white font-medium border-bottom-hover-effect"
+                        >Air quality monitoring</a
+                      >
+                    </li>
+                    <div class="contactus_btn">
+                      <a
+                        href="contactus.html"
+                        class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
+                      >
+                        Contact us
+                      </a>
+                    </div>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <nav class="flex-1 text-end mr-8 hidden lg:block" id="app-nav-bar">
+              <ul
+                class="flex justify-end gap-10 lg:flex-row flex-col"
+                id="app-nav-bar-list"
+              >
                 <li>
                   <a
-                    href="../index.html"
+                    href="index.html"
                     class="text-white font-medium border-bottom-hover-effect"
                     >About Us</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../weldingProcedures.html"
+                    href="weldingProcedures.html"
                     class="text-white font-medium border-bottom-hover-effect"
                     >Welding procedures</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../ndt.html"
+                    href="ndt.html"
                     class="text-white font-medium border-bottom-hover-effect"
                     >NDT</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../airQuality.html"
+                    href="airQuality.html"
                     class="text-white font-medium border-bottom-hover-effect"
                     >Air quality monitoring</a
                   >
                 </li>
               </ul>
             </nav>
-            <div class="contactus_btn">
+            <div class="contactus_btn lg:block hidden">
               <a
-                href="../contactus.html"
+                href="contactus.html"
                 class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
               >
                 Contact us
@@ -98,23 +170,53 @@
               <h1
                 class="text-white text-[24px] md:text-[40px] xl:text-[60px] font-[600] text-center leading-[34px] md:leading-[64px] xl:leading-[74px]"
               >
-                Non-destructive testing
+                Non-Destructive Testing
               </h1>
               <p
                 class="text-white text-[14px] md:text-[16px] xl:text-[20px] font-[300] text-center mt-6"
               >
-                NDT is a technique employed by industries to assess the
+                Quality Without Compromise
+                <!-- NDT is a technique employed by industries to assess the
                 properties of materials, <br />
                 components, structures, or systems for characteristic
                 variations, welding defects, and <br />discontinuities, all
-                without damaging the original part.
+                without damaging the original part. -->
               </p>
             </div>
           </div>
         </div>
       </header>
     </div>
-    <div id="ndtpage">
+    <!-- Introduction Section -->
+    <section class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img
+            src="./assets/images/ndt/nd-4.webp"
+            alt="NDT Equipment"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+        <div>
+          <h2 class="text-[26px] lg:text-[36px] text-footer_black font-[600]">
+            Non-Destructive Testing (NDT) Services
+          </h2>
+          <p class="mt-6 text-text_normal leading-relaxed">
+            The Welding Wiz also offers services to clients that require
+            Non-Destructive Testing (NDT) services to ensure the quality,
+            safety, and reliability of welds without any damage to the material
+            used. We are proud to have nation-wise expertise as our team of
+            highly skilled and certified NDT technicians are located in every
+            state in Australia, which ensures clients access to our services no
+            matter where the project is based. Each member of our team has
+            undergone training and is certified under the Australia Institute
+            for Non-destructive Testing (AINDT) which guarantees high levels of
+            competence and industry knowledge when on the job.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div id="ndtpage-services">
       <div class="container mx-auto py-[96px]">
         <div class="header text-center">
           <h2 class="text-[26px] lg:text-[36px] text-footer_black font-[600]">
@@ -135,7 +237,7 @@
             class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
           >
             <img
-              src="./assets/images/ndt/nd-1.jpg"
+              src="./assets/images/ndt/nd-1.webp"
               alt="about-us"
               class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
             />
@@ -170,7 +272,7 @@
             class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
           >
             <img
-              src="./assets/images/ndt/nd-2.jpg"
+              src="./assets/images/ndt/nd-2.webp"
               alt="about-us"
               class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
             />
@@ -204,7 +306,7 @@
             class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
           >
             <img
-              src="./assets/images/ndt/nd-3.jpg"
+              src="./assets/images/ndt/nd-3.webp"
               alt="about-us"
               class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
             />
@@ -239,7 +341,7 @@
             class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
           >
             <img
-              src="./assets/images/ndt/nd-4.jpg"
+              src="./assets/images/ndt/nd-4.webp"
               alt="about-us"
               class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
             />
@@ -272,7 +374,7 @@
             class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
           >
             <img
-              src="./assets/images/ndt/nd-5.jpg"
+              src="./assets/images/ndt/nd-5.webp"
               alt="about-us"
               class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
             />
@@ -306,7 +408,7 @@
             class="image flex-shrink-0 bg-[#D1443B14] w-full xl:w-[543px] 2xl:w-[743px] h-[437px] rounded-[16px]"
           >
             <img
-              src="./assets/images/ndt/nd-6.jpg"
+              src="./assets/images/ndt/nd-6.webp"
               alt="about-us"
               class="w-[calc(100%-64px)] m-auto object-cover h-[calc(100%-64px)] rounded-[16px] mt-8"
             />
@@ -334,6 +436,225 @@
         </div>
       </div>
     </div>
+
+    <!-- NDT Services Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-[26px] lg:text-[36px] text-footer_black font-[600] text-center"
+        >
+          Our NDT Services
+        </h2>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Magnetic Particle Inspection -->
+          <div
+            class="group relative bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-primary hover:scale-105 transition-all duration-300 overflow-hidden"
+          >
+            <div
+              class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+            >
+              <i class="fas fa-magnet"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">
+              Magnetic Particle Inspection (MPI)
+            </h3>
+            <p class="mt-4 text-text_normal">
+              Used to identify defects on the surface of Ferromagnetic
+              Materials.
+            </p>
+            <!-- Hover Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark_gray/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex flex-col justify-center text-white"
+            >
+              <h3 class="text-xl font-bold">
+                Magnetic Particle Inspection (MPI)
+              </h3>
+              <p class="mt-4">
+                A non-destructive testing method used to detect surface and
+                near-surface discontinuities in ferromagnetic materials.
+              </p>
+            </div>
+          </div>
+          <!-- Ultrasonic Testing -->
+          <div
+            class="group relative bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-primary hover:scale-105 transition-all duration-300 overflow-hidden"
+          >
+            <div
+              class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+            >
+              <i class="fas fa-wave-square"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">
+              Ultrasonic Testing (UT)
+            </h3>
+            <p class="mt-4 text-text_normal">
+              Used to detect internal flaws in the weld.
+            </p>
+            <!-- Hover Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark_gray/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex flex-col justify-center text-white"
+            >
+              <h3 class="text-xl font-bold">Ultrasonic Testing (UT)</h3>
+              <p class="mt-4">
+                A technique that uses high-frequency sound waves to detect
+                internal flaws or measure material thickness.
+              </p>
+            </div>
+          </div>
+          <!-- Eddy Current Testing -->
+          <div
+            class="group relative bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-primary hover:scale-105 transition-all duration-300 overflow-hidden"
+          >
+            <div
+              class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+            >
+              <i class="fas fa-circle-notch"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">
+              Eddy Current Testing
+            </h3>
+            <p class="mt-4 text-text_normal">
+              Used for detecting surface defects.
+            </p>
+            <!-- Hover Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark_gray/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex flex-col justify-center text-white"
+            >
+              <h3 class="text-xl font-bold">Eddy Current Testing</h3>
+              <p class="mt-4">
+                A method that uses electromagnetic induction to detect surface
+                and near-surface defects in conductive materials.
+              </p>
+            </div>
+          </div>
+          <!-- Dye Penetrant Testing -->
+          <div
+            class="group relative bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-primary hover:scale-105 transition-all duration-300 overflow-hidden"
+          >
+            <div
+              class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+            >
+              <i class="fas fa-tint"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">
+              Dye Penetrant Testing
+            </h3>
+            <p class="mt-4 text-text_normal">
+              Used for detecting surface defects.
+            </p>
+            <!-- Hover Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark_gray/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex flex-col justify-center text-white"
+            >
+              <h3 class="text-xl font-bold">Dye Penetrant Testing</h3>
+              <p class="mt-4">
+                A method that uses a liquid dye to detect surface-breaking
+                defects in non-porous materials.
+              </p>
+            </div>
+          </div>
+          <!-- Radiography -->
+          <div
+            class="group relative bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-primary hover:scale-105 transition-all duration-300 overflow-hidden"
+          >
+            <div
+              class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+            >
+              <i class="fas fa-x-ray"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">Radiography</h3>
+            <p class="mt-4 text-text_normal">
+              Used to reveal internal weld defects.
+            </p>
+            <!-- Hover Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark_gray/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex flex-col justify-center text-white"
+            >
+              <h3 class="text-xl font-bold">Radiography</h3>
+              <p class="mt-4">
+                A technique that uses X-rays or gamma rays to inspect the
+                internal structure of components.
+              </p>
+            </div>
+          </div>
+          <!-- Phased Array Testing -->
+          <div
+            class="group relative bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-primary hover:scale-105 transition-all duration-300 overflow-hidden"
+          >
+            <div
+              class="text-4xl bg-gradient-to-r from-primary to-dark_gray bg-clip-text text-transparent"
+            >
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">
+              Phased Array Testing
+            </h3>
+            <p class="mt-4 text-text_normal">
+              Used to reveal internal weld defects.
+            </p>
+            <!-- Hover Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark_gray/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-8 flex flex-col justify-center text-white"
+            >
+              <h3 class="text-xl font-bold">Phased Array Testing</h3>
+              <p class="mt-4">
+                An advanced ultrasonic testing method that uses multiple
+                elements to steer and focus the sound beam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section
+      class="relative py-16 bg-gradient-to-r from-primary to-dark_gray overflow-hidden"
+    >
+      <!-- Background Animation -->
+      <div
+        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagonal-striped-brick.png')] opacity-10"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <!-- Image -->
+          <div class="rounded-lg overflow-hidden shadow-2xl">
+            <img
+              src="./assets/images/ndt/nd-2.webp"
+              alt="NDT Services"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <!-- Text and Button -->
+          <div class="text-white">
+            <h2 class="text-3xl font-bold">Get Started with NDT Services</h2>
+            <p class="mt-6 max-w-2xl">
+              No matter which type of NDT we use on site, The Welding Wiz
+              ensures that every test meets industry standards to provide
+              reliable results that maintain the durability and safety of welded
+              structures.
+            </p>
+            <div class="mt-8">
+              <a
+                href="#"
+                class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-opacity-90 transition duration-300"
+              >
+                Book Now Online
+              </a>
+              <p class="mt-4">
+                Or send an online work request or email
+                <a href="mailto:info@theweldingwiz.com.au" class="underline"
+                  >info@theweldingwiz.com.au</a
+                >
+                for a purchase order and a work request, which you can download
+                <a href="#" class="underline">here</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div id="footer"></div>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"

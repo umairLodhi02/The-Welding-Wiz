@@ -27,63 +27,77 @@ const cards = [
   {
     id: 5,
     name: "Advanced NDT - ECA Eddy Current Array test",
-    isVisible: false,
   },
   {
     id: 6,
     name: "Advanced NDT - PAUT Phased Array Ultrasonic test",
-    isVisible: false,
   },
   {
     id: 7,
     name: "Advanced NDT - TOFD Time of Flight Diffraction",
-    isVisible: false,
   },
   {
     id: 8,
     name: "Advanced NDT - CRT Computed Radiographic testing",
-    isVisible: false,
     fullwidth: true,
   },
   {
     id: 9,
     name: "NDT - Non-destructive testing - RT, UT, ET, MT, PT",
-    isVisible: false,
   },
   {
     id: 10,
     name: "Pressure vessel Inspection AICIP & Conformity",
-    isVisible: false,
   },
-  { id: 11, name: "Chemical analysis (Spark Spectroscopy)", isVisible: false },
+  { id: 11, name: "Chemical analysis (Spark Spectroscopy)" },
   {
     id: 12,
     name: "Third party Inspection & expert Witness",
     fullwidth: true,
-    isVisible: false,
   },
-  { id: 13, name: "Quality Audit & NDT Level 3 services", isVisible: false },
-  { id: 14, name: "Hydrostatic pressure test", isVisible: false },
+  { id: 13, name: "Quality Audit & NDT Level 3 services" },
+  { id: 14, name: "Hydrostatic pressure test" },
   {
     id: 15,
     name: "PMI - Positive Material Identification (XRF)",
-    isVisible: false,
   },
   {
     id: 16,
     name: "Mechanical testing (engineering)",
     fullwidth: true,
-    isVisible: false,
   },
-  { id: 17, name: "Corrosion Resistance Test", isVisible: false },
-  { id: 18, name: "Metallurgical services", isVisible: false },
-  { id: 19, name: "Failure investigation", isVisible: false },
+  { id: 17, name: "Corrosion Resistance Test" },
+  { id: 18, name: "Metallurgical services" },
+  { id: 19, name: "Failure investigation" },
 ];
 
 $(document).ready(function () {
   // Initializing variables
   const servicesContainer = $("#our-services-section #services");
   const loadMoreButton = $("#load-more-btn");
+  const ndtPageServices = $("#ndtpage-services");
+  ndtPageServices.hide();
+  // related to mobile nav toggle
+  const openMobileNavBtn = $("#open-mobile-nav");
+  const closeMobileNavBtn = $("#close-mobile-nav");
+  const mobileNavContainer = $("#mobile-nav-container");
+
+  openMobileNavBtn.on("click", function (e) {
+    mobileNavContainer.animate(
+      {
+        left: 0,
+        height: "100vh",
+        width: "100%",
+        opacity: 1,
+      },
+      "fast"
+    );
+  });
+
+  closeMobileNavBtn.on("click", function (e) {
+    mobileNavContainer.animate({ left: -1200 }, "fast");
+  });
+  // related to mobile nav toggle
 
   let visibleServices = 9; // Initial number of services visible
   const totalServices = cards.length;
@@ -98,7 +112,7 @@ $(document).ready(function () {
       let isFull = card.fullwidth ? "lg:basis-full" : "";
       let serviceHeight = isFull ? "h-[328px] lg:h-[396px]" : "h-[328px]";
       let serviceImgHeight = isFull ? "h-[240px] lg:h-[340px]" : "h-[240px]";
-      let objFit = isFull ? "object-cover" : "";
+      let objFit = isFull ? "object-cover" : "object-cover";
       let margin = isFull ? "lg:my-6" : "";
 
       let service = `

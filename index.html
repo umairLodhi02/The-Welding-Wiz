@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="max-age=31536000, must-revalidate"
+    />
+
     <title>Welding wiz</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,45 +53,120 @@
           <div
             class="w-full flex flex-col justify-between gap-[120px] bg-[rgba(0,0,0,0.6)]"
           >
-            <div class="flex container mt-4 mx-auto items-center flex-wrap">
+            <div
+              class="flex container mt-4 mx-auto items-center flex-wrap lg:justify-start justify-between"
+            >
               <div class="logo w-[174px] h-[137px]">
                 <img src="./assets/images/common/logo.png" alt="" srcset="" />
               </div>
-              <nav class="flex-1 text-end mr-8" id="app-nav-bar">
-                <ul class="flex justify-end gap-10" id="app-nav-bar-list">
+              <div class="flex-1 relative lg:hidden flex justify-end flex-grow">
+                <button
+                  class="cursor-pointer text-[30px] text-white"
+                  id="open-mobile-nav"
+                >
+                  <i class="fa fa-bars"></i>
+                </button>
+              </div>
+              <div
+                class="lg:hidden block fixed top-0 z-[1045]"
+                id="mobile-nav-container"
+                style="left: -9999px; opacity: 0; height: 0; width: 0"
+              >
+                <div class="bg-dark w-full h-full">
+                  <nav id="mobile-nav">
+                    <ul
+                      class="flex gap-10 flex-col mx-8 py-8"
+                      id="app-nav-bar-list"
+                    >
+                      <li>
+                        <button
+                          class="cursor-pointer text-[30px] text-white float-right"
+                          id="close-mobile-nav"
+                        >
+                          <i class="fa fa-times"></i>
+                        </button>
+                      </li>
+                      <li>
+                        <a
+                          href="index.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >About Us</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="weldingProcedures.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >Welding procedures</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="ndt.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >NDT</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="airQuality.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >Air quality monitoring</a
+                        >
+                      </li>
+                      <div class="contactus_btn">
+                        <a
+                          href="contactus.html"
+                          class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
+                        >
+                          Contact us
+                        </a>
+                      </div>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <nav
+                class="flex-1 text-end mr-8 hidden lg:block"
+                id="app-nav-bar"
+              >
+                <ul
+                  class="flex justify-end gap-10 lg:flex-row flex-col"
+                  id="app-nav-bar-list"
+                >
                   <li>
                     <a
-                      href="../index.html"
+                      href="index.html"
                       class="text-white font-medium border-bottom-hover-effect"
                       >About Us</a
                     >
                   </li>
                   <li>
                     <a
-                      href="../weldingProcedures.html"
+                      href="weldingProcedures.html"
                       class="text-white font-medium border-bottom-hover-effect"
                       >Welding procedures</a
                     >
                   </li>
                   <li>
                     <a
-                      href="../ndt.html"
+                      href="ndt.html"
                       class="text-white font-medium border-bottom-hover-effect"
                       >NDT</a
                     >
                   </li>
                   <li>
                     <a
-                      href="../airQuality.html"
+                      href="airQuality.html"
                       class="text-white font-medium border-bottom-hover-effect"
                       >Air quality monitoring</a
                     >
                   </li>
                 </ul>
               </nav>
-              <div class="contactus_btn">
+              <div class="contactus_btn lg:block hidden">
                 <a
-                  href="../contactus.html"
+                  href="contactus.html"
                   class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
                 >
                   Contact us
@@ -109,11 +189,11 @@
                   to meet the highest <br />
                   standards in engineering and manufacturing.
                 </p>
-                <button class="btn btn-primary w-[236px]">
+                <a class="btn btn-primary w-[236px]" href="./ndt.html">
                   Explore NDT Services<i
                     class="fa-solid fa-arrow-right-long"
                   ></i>
-                </button>
+                </a>
               </div>
             </div>
             <div class="contact_section bg-dark text-white mt-16">
@@ -125,10 +205,10 @@
                     <i class="fa-regular fa-clock mr-3"></i>Office hours
                   </h6>
                   <p class="mb-3 text-light_gray font-[500] text-[16px]">
-                    Mon - Fri: 10:00 AM - 10:00 PM
+                    Mon - Fri: 10:00 - 18:00
                   </p>
                   <p class="text-light_gray font-[500] text-[16px]">
-                    Sat - Sun: 12:00 AM - 08:00 PM
+                    Sat - Sun: 09:00 - 14:00
                   </p>
                 </div>
                 <div class="phone_numbers">
@@ -136,10 +216,10 @@
                     <i class="fa-solid fa-phone mr-3"></i>Call us anytime
                   </h6>
                   <p class="mb-3 text-light_gray font-[500] text-[16px]">
-                    + 123 5647 8758
+                    +1-999-434-7923
                   </p>
                   <p class="text-light_gray font-[500] text-[16px]">
-                    + 123 5647 8758
+                    +2-888-434-7924
                   </p>
                 </div>
                 <div class="email">
@@ -147,10 +227,10 @@
                     <i class="fa-regular fa-envelope mr-3"></i>Email us
                   </h6>
                   <p class="mb-3 text-light_gray font-[500] text-[16px]">
-                    info@weldingwizard.com
+                    Info@theweldngwizard.com.au
                   </p>
                   <p class="text-light_gray font-[500] text-[16px]">
-                    info@weldingwizard.com
+                    office@theweldingwizard.com
                   </p>
                 </div>
               </div>

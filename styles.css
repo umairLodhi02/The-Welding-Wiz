@@ -13,6 +13,9 @@
   font-style: normal;
   transition: all 0.2s ease-in-out;
 }
+a:hover {
+  color: var(--light-pink);
+}
 
 /***************************** START - Home page banner  *****************************/
 header#main-header {
@@ -173,7 +176,7 @@ header#main-header {
 /***************************** START - Styles NDT page *****************************/
 #ndt-header {
   background-color: #595959;
-  background-image: url(./assets/images/ndt/ndt-banner.jpg);
+  background-image: url(./assets/images/ndt/ndt-banner.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 101% 100%;
