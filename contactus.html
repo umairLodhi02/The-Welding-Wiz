@@ -16,7 +16,8 @@
               light_gray: "#BDBDBD",
               dark_gray: "#595959",
               dark: "#000",
-              text_normal: "rgba(10,10,10)",
+              footer_black: "#101010",
+              light_white: "#F5F6F4",
             },
             backgroundImage: {
               banner_bg: "url('./assets/images/common/header-bg.jpg')",
@@ -41,247 +42,289 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="header">
-      <header class="flex flex-col relative w-full" id="main-header">
-        <div
-          class="w-full flex flex-col justify-between gap-[120px] bg-[rgba(0,0,0,0.6)]"
-        >
+    <div class="contactus-page">
+      <div id="header">
+        <header class="flex flex-col relative w-full" id="main-header">
           <div
-            class="flex container mt-4 mx-auto items-center flex-wrap lg:justify-start justify-between"
+            class="w-full flex flex-col justify-between gap-[120px] bg-[rgba(0,0,0,0.6)]"
           >
-            <div class="logo w-[174px] h-[137px]">
-              <img src="./assets/images/common/logo.png" alt="" srcset="" />
-            </div>
-            <div class="flex-1 relative lg:hidden flex justify-end flex-grow">
-              <button
-                class="cursor-pointer text-[30px] text-white"
-                id="open-mobile-nav"
-              >
-                <i class="fa fa-bars"></i>
-              </button>
-            </div>
             <div
-              class="lg:hidden block fixed top-0 z-[1045]"
-              id="mobile-nav-container"
-              style="left: -9999px; opacity: 0; height: 0; width: 0"
+              class="flex container mt-4 mx-auto items-center flex-wrap lg:justify-start justify-between"
             >
-              <div class="bg-dark w-full h-full">
-                <nav id="mobile-nav">
-                  <ul
-                    class="flex gap-10 flex-col mx-8 py-8"
-                    id="app-nav-bar-list"
-                  >
-                    <li>
-                      <button
-                        class="cursor-pointer text-[30px] text-white float-right"
-                        id="close-mobile-nav"
-                      >
-                        <i class="fa fa-times"></i>
-                      </button>
-                    </li>
-                    <li>
-                      <a
-                        href="index.html"
-                        class="text-white font-medium border-bottom-hover-effect"
-                        >About Us</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="weldingProcedures.html"
-                        class="text-white font-medium border-bottom-hover-effect"
-                        >Welding procedures</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="ndt.html"
-                        class="text-white font-medium border-bottom-hover-effect"
-                        >NDT</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="airQuality.html"
-                        class="text-white font-medium border-bottom-hover-effect"
-                        >Air quality monitoring</a
-                      >
-                    </li>
-                    <div class="contactus_btn">
-                      <a
-                        href="contactus.html"
-                        class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
-                      >
-                        Contact us
-                      </a>
-                    </div>
-                  </ul>
-                </nav>
+              <div class="logo w-[174px] h-[137px]">
+                <img src="./assets/images/common/logo.png" alt="" srcset="" />
+              </div>
+              <div class="flex-1 relative lg:hidden flex justify-end flex-grow">
+                <button
+                  class="cursor-pointer text-[30px] text-white"
+                  id="open-mobile-nav"
+                >
+                  <i class="fa fa-bars"></i>
+                </button>
+              </div>
+              <div
+                class="lg:hidden block fixed top-0 z-[1045]"
+                id="mobile-nav-container"
+                style="left: -9999px; opacity: 0; height: 0; width: 0"
+              >
+                <div class="bg-dark w-full h-full">
+                  <nav id="mobile-nav">
+                    <ul
+                      class="flex gap-10 flex-col mx-8 py-8"
+                      id="app-nav-bar-list"
+                    >
+                      <li>
+                        <button
+                          class="cursor-pointer text-[30px] text-white float-right"
+                          id="close-mobile-nav"
+                        >
+                          <i class="fa fa-times"></i>
+                        </button>
+                      </li>
+                      <li>
+                        <a
+                          href="index.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >About Us</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="weldingProcedures.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >Welding procedures</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="ndt.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >NDT</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="airQuality.html"
+                          class="text-white font-medium border-bottom-hover-effect"
+                          >Air quality monitoring</a
+                        >
+                      </li>
+                      <div class="contactus_btn">
+                        <a
+                          href="contactus.html"
+                          class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
+                        >
+                          Contact us
+                        </a>
+                      </div>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <nav
+                class="flex-1 text-end mr-8 hidden lg:block"
+                id="app-nav-bar"
+              >
+                <ul
+                  class="flex justify-end gap-10 lg:flex-row flex-col"
+                  id="app-nav-bar-list"
+                >
+                  <li>
+                    <a
+                      href="index.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="weldingProcedures.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >Welding procedures</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ndt.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >NDT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="airQuality.html"
+                      class="text-white font-medium border-bottom-hover-effect"
+                      >Air quality monitoring</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div class="contactus_btn lg:block hidden">
+                <a
+                  href="contactus.html"
+                  class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
+                >
+                  Contact us
+                </a>
               </div>
             </div>
-            <nav class="flex-1 text-end mr-8 hidden lg:block" id="app-nav-bar">
-              <ul
-                class="flex justify-end gap-10 lg:flex-row flex-col"
-                id="app-nav-bar-list"
-              >
-                <li>
-                  <a
-                    href="index.html"
-                    class="text-white font-medium border-bottom-hover-effect"
-                    >About Us</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="weldingProcedures.html"
-                    class="text-white font-medium border-bottom-hover-effect"
-                    >Welding procedures</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="ndt.html"
-                    class="text-white font-medium border-bottom-hover-effect"
-                    >NDT</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="airQuality.html"
-                    class="text-white font-medium border-bottom-hover-effect"
-                    >Air quality monitoring</a
-                  >
-                </li>
-              </ul>
-            </nav>
-            <div class="contactus_btn lg:block hidden">
-              <a
-                href="contactus.html"
-                class="bg-primary text-white py-[10px] px-[18px] rounded uppercase font-semibold hover:bg-light_white hover:text-primary hover:scale-105 hover:rounded-2xl"
-              >
-                Contact us
-              </a>
-            </div>
           </div>
-
-          <div class="relative w-full rounded-lg flex-1">
-            <div class="flex flex-col items-center justify-end">
-              <h1
-                class="text-white text-[24px] md:text-[40px] xl:text-[60px] font-[600] text-center leading-[34px] md:leading-[64px] xl:leading-[74px]"
-              >
-                Expert Welding & Precision <br />
-                Testing Solutions
-              </h1>
-              <p
-                class="text-white text-[14px] md:text-[16px] xl:text-[20px] font-[300] text-center mt-6 mb-10"
-              >
-                Delivering reliable, certified inspection and testing services
-                to meet the highest <br />
-                standards in engineering and manufacturing.
+        </header>
+      </div>
+      <!-- Combined Contact Information Section -->
+      <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-dark_gray text-center">
+          Contact Information
+        </h2>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Opening Hours -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="text-2xl text-primary">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">Opening Hours</h3>
+            <div class="mt-4 space-y-2">
+              <p class="text-text_normal">
+                <strong>Monday-Friday:</strong> 09:00 – 18:00
               </p>
-              <button class="btn btn-primary w-[236px]">
-                Explore NDT Services<i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+              <p class="text-text_normal">
+                <strong>Saturday:</strong> 09:00 – 14:00
+              </p>
+              <p class="text-text_normal"><strong>Sunday:</strong> Closed</p>
             </div>
           </div>
-          <div class="contact_section bg-dark text-white mt-16">
-            <div
-              class="flex justify-between py-8 container m-auto gap-4 flex-wrap"
-            >
-              <div class="office_hours">
-                <h6 class="font-[700] text-[16px] uppercase mb-4">
-                  <i class="fa-regular fa-clock mr-3"></i>Office hours
-                </h6>
-                <p class="mb-3 text-light_gray font-[500] text-[16px]">
-                  Mon - Fri: 10:00 AM - 10:00 PM
-                </p>
-                <p class="text-light_gray font-[500] text-[16px]">
-                  Sat - Sun: 12:00 AM - 08:00 PM
-                </p>
-              </div>
-              <div class="phone_numbers">
-                <h6 class="font-[700] text-[16px] uppercase mb-4">
-                  <i class="fa-solid fa-phone mr-3"></i>Call us anytime
-                </h6>
-                <p class="mb-3 text-light_gray font-[500] text-[16px]">
-                  + 123 5647 8758
-                </p>
-                <p class="text-light_gray font-[500] text-[16px]">
-                  + 123 5647 8758
-                </p>
-              </div>
-              <div class="email">
-                <h6 class="font-[700] text-[16px] uppercase mb-4">
-                  <i class="fa-regular fa-envelope mr-3"></i>Email us
-                </h6>
-                <p class="mb-3 text-light_gray font-[500] text-[16px]">
-                  info@weldingwizard.com
-                </p>
-                <p class="text-light_gray font-[500] text-[16px]">
-                  info@weldingwizard.com
-                </p>
-              </div>
+          <!-- Phone Numbers -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="text-2xl text-primary">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">Call Us</h3>
+            <div class="mt-4 space-y-2">
+              <p class="text-text_normal">+1-999-434-7923</p>
+              <p class="text-text_normal">+2-888-434-7924</p>
+            </div>
+          </div>
+          <!-- Email Addresses -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="text-2xl text-primary">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">Email Us</h3>
+            <div class="mt-4 space-y-2">
+              <a
+                href="mailto:info@theweldngwizard.com.au"
+                class="text-text_normal"
+                >info@theweldngwizard.com.au</a
+              >
+              <a
+                href="mailto:office@theweldngwizard.com.au"
+                class="text-text_normal"
+                >office@theweldingwizard.com</a
+              >
+            </div>
+          </div>
+          <!-- Location -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="text-2xl text-primary">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark_gray mt-6">Location</h3>
+            <div class="mt-4 space-y-2">
+              <p class="text-text_normal">15a Strathearn Ave,</p>
+              <p class="text-text_normal">Murrumbeena, VIC,</p>
+              <p class="text-text_normal">Australia, Victoria</p>
             </div>
           </div>
         </div>
-      </header>
-    </div>
-    <div id="contactus-page" class="xl:w-4/5 m-auto">
-      <div class="lg:h-screen">
-        <div
-          class="grid lg:grid-cols-3 items-center max-lg:justify-center gap-6 h-full sm:p-12 p-8 max-sm:p-4"
-        >
-          <div class="max-w-lg max-lg:mx-auto max-lg:text-center max-lg:mb-6">
-            <h2 class="text-4xl font-extrabold text-text_normal">
-              Get In Touch
-            </h2>
-            <p class="text-sm text-text_normal mt-4 leading-relaxed">
-              Have a specific inquiry or looking to explore new opportunities?
-              Our experienced team is ready to engage with you.
-            </p>
+      </section>
+      <div id="contactus-page" class="container px-6 py-16 m-auto">
+        <div class="">
+          <div
+            class="grid lg:grid-cols-3 items-center max-lg:justify-center gap-6 h-full"
+          >
+            <div class="max-w-lg max-lg:mx-auto max-lg:text-center max-lg:mb-6">
+              <h2 class="text-4xl font-extrabold text-text_normal">
+                Send us a message
+              </h2>
+              <p class="text-sm text-text_normal mt-4 leading-relaxed">
+                Have a specific inquiry or looking to explore new opportunities?
+                Our experienced team is ready to engage with you.
+              </p>
 
-            <form
-              class="mx-auto mt-8 bg-white rounded-lg p-6 shadow-md space-y-4"
-            >
-              <input
-                type="text"
-                placeholder="Name"
-                class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
-              />
-              <input
-                type="text"
-                placeholder="Subject"
-                class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
-              />
-              <textarea
-                placeholder="Message"
-                rows="6"
-                class="w-full rounded-md px-6 bg-[#f0f1f2] text-sm pt-3 outline-none"
-              ></textarea>
-              <button
-                type="button"
-                class="text-white bg-primary hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full"
+              <form
+                class="mx-auto mt-8 bg-white rounded-lg p-6 shadow-md space-y-4"
               >
-                Send Message
-              </button>
-            </form>
-          </div>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
+                />
+                <textarea
+                  placeholder="Message"
+                  rows="6"
+                  class="w-full rounded-md px-6 bg-[#f0f1f2] text-sm pt-3 outline-none"
+                ></textarea>
+                <button
+                  type="button"
+                  class="text-white bg-primary hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
 
-          <div class="z-10 relative lg:col-span-2 lg:block md:hidden sm:hidden">
-            <img
-              src="./assets/images/contactus.webp"
-              class="w-3/4 object-contain block ml-auto"
-            />
+            <div class="z-10 relative lg:col-span-2 lg:block hidden">
+              <img
+                src="./assets/images/contactus.webp"
+                class="w-3/4 object-contain block ml-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
+      <!-- Google Map Section -->
+      <section class="container mx-auto px-6 pb-16">
+        <h2 class="text-3xl font-bold text-dark_gray text-center">
+          Our Location
+        </h2>
+        <div class="mt-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.123456789012!2d145.1234567890123!3d-37.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDA3JzI0LjQiUyAxNDXCsDA3JzI0LjQiRQ!5e0!3m2!1sen!2sau!4v1234567890123!5m2!1sen!2sau"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            class="rounded-lg shadow-lg"
+          ></iframe>
+        </div>
+      </section>
+      <div id="footer"></div>
     </div>
-    <div id="footer"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script src="./script/main.js"></script>
   </body>
 </html>

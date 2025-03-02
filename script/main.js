@@ -75,8 +75,6 @@ $(document).ready(function () {
   // Initializing variables
   const servicesContainer = $("#our-services-section #services");
   const loadMoreButton = $("#load-more-btn");
-  const ndtPageServices = $("#ndtpage-services");
-  ndtPageServices.hide();
   // related to mobile nav toggle
   const openMobileNavBtn = $("#open-mobile-nav");
   const closeMobileNavBtn = $("#close-mobile-nav");
